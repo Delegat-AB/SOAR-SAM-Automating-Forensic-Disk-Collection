@@ -18,9 +18,10 @@ regions      = '{all-regions}'
 # capabilities = 'CAPABILITY_NAMED_IAM'
 
 
-# [[post-SAM-CloudFormation]]
-# name         = "INFRA-diskMember"
-# template     = 'Install_after_SAM/diskMember.yaml'
-# account      = 'ALL'
-# regions      = '{all-regions}'
+[[CloudFormation]]
+name             = "INFRA-diskMember"
+template         = 'Install_after_SAM/diskMember.yaml'
+account          = 'ALL'
+regions          = '{all-regions}'
+separate-regions = true
 
