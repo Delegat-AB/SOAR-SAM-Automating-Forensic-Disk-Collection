@@ -12,7 +12,7 @@ Parameters:
   ArtifactBucketName:
     Type: String
     Default: delegat-soar-forensic-artifacts
-    Description: Base name for the regional S3 bucket used to store forensic artifacts (region will be added)
+    Description: Base name for the regional S3 bucket used to store forensic artifacts (account ID and region will be added)
   ArtifactBucketExpirationInDays:
     Type: Number
     Default: 3650

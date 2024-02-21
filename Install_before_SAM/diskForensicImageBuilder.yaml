@@ -390,7 +390,7 @@ Resources:
       Description: Infrastructure config used to build disk forensic AMI
       InstanceProfileName: !Ref InstanceProfileName # Parametrised in two places
       InstanceTypes:
-        - m5a.large
+        # - m5a.large
         - m5.large # m5a.large isn't available in Stockholm
         - t3.large
       Name: ForensicDiskImageBuildConfig
@@ -409,7 +409,7 @@ Resources:
       Description: Infrastructure config used to build disk forensic AMI
       InstanceProfileName: !Ref InstanceProfileName # Parametrised in two places
       InstanceTypes:
-        - m5a.large
+        # - m5a.large
         - m5.large # m5a.large isn't available in Stockholm
         - t3.large
       Name: ForensicDiskImageBuildConfig

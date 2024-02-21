@@ -92,7 +92,7 @@ def lambda_handler(event, context):
         
         response = ec2.run_instances(
             ImageId=amiID,
-            InstanceType='m5a.large',
+            InstanceType='m5.large',   # m5a.large doesn't exist in Stockholm
             MaxCount=1,
             MinCount=1,
             SecurityGroupIds=[

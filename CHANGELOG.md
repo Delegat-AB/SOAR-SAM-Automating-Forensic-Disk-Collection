@@ -1,5 +1,10 @@
 # Change Log
 
+## v1.1.3
+    * Trying to run an m5a.large (hardcoded!) isn't a good idea as it doesn't exist
+      in all regions. Replaced it with "m5.large" for now, will parametrise it as
+      the next step.
+
 ## v1.1.2
     * Corrected alarm logical name.
 
