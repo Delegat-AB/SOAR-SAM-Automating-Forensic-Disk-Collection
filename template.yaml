@@ -37,6 +37,12 @@ Parameters:
       Select Yes to terminate the rogue server after the initial snapshot has been captured.
       Select No to leave it running.
 
+  InstanceType:
+    Type: String
+    Description: The name of the IAM Instance Type to use
+    Default: 'm5.large'
+
+
   VPCCIDR:
     Type: String
     Default: 172.16.0.0/16
@@ -525,6 +531,8 @@ Resources:
           INSTANCE_PROFILE_NAME: !Sub '${EC2ForensicRole}_${AWS::Region}'
           SECURITY_GROUP: !GetAtt ForensicsCaptureSecurityGroup.GroupId
           VPC_ID: !Ref forensicsVPC
+          INSTANCE_TYPE: !Ref InstanceType
+
 
   MountVolumeLambda:
     Type: AWS::Serverless::Function

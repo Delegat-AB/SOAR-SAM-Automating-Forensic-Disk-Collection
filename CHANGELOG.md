@@ -1,5 +1,9 @@
 # Change Log
 
+## v1.1.4
+    * Parametrised the instance type used during forensics operations.
+      (The instance types used during production of the AMI remain to be done.)
+
 ## v1.1.3
     * Trying to run an m5a.large (hardcoded!) isn't a good idea as it doesn't exist
       in all regions. Replaced it with "m5.large" for now, will parametrise it as
