@@ -18,6 +18,11 @@ Parameters:
     Default: ImageBuilderForensicInstanceProfile
 
 
+  InstanceTypeList:
+    Type: String
+    Default: 'm5.large,t3.large'
+
+
 Conditions:
   IAMRegionBlank: !Equals
     - !Ref IAMRegion
@@ -392,9 +397,7 @@ Resources:
     Properties:
       Description: Infrastructure config used to build disk forensic AMI
       InstanceProfileName: !Ref InstanceProfileName # Parametrised in two places
-      InstanceTypes:
-        - m5.large
-        - t3.large
+      InstanceTypes: !Split [",", !Ref InstanceTypeList]
       Name: ForensicDiskImageBuildConfig
       TerminateInstanceOnFailure: true
       # ----- The following two properties have been added: -----
@@ -410,9 +413,7 @@ Resources:
     Properties:
       Description: Infrastructure config used to build disk forensic AMI
       InstanceProfileName: !Ref InstanceProfileName # Parametrised in two places
-      InstanceTypes: 
-        - m5.large
-        - t3.large
+      InstanceTypes: !Split [",", !Ref InstanceTypeList]
       Name: ForensicDiskImageBuildConfig
       TerminateInstanceOnFailure: true
       # ----- The following two properties have been added: -----

@@ -1,5 +1,8 @@
 # Change Log
 
+## v1.2.0
+    * Parametrised the instance types used in diskForensicImageBuilder.
+
 ## v1.1.4
     * Parametrised the instance type used during forensics operations.
       (The instance types used during production of the AMI remain to be done.)
