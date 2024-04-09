@@ -1,5 +1,9 @@
 # Change Log
 
+## v1.2.1
+    * Python v3.12.2.
+    * `.python-version` file to support `pyenv`.
+
 ## v1.2.0
     * Parametrised the instance types used in diskForensicImageBuilder.
 
